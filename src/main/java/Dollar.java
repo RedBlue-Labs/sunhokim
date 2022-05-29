@@ -4,11 +4,12 @@ public class Dollar {
     public Dollar(int amount) {
         this.amount = amount;
     }
-    int times(int multiplier) {
-        amount *= multiplier;
-        return amount;
+
+    public Dollar times(int multiplier) {
+        return new Dollar(amount *= multiplier);
     }
 
+    @Override
     public boolean equals(Object object) {
         Dollar dollar = (Dollar) object;
         return amount == dollar.amount;
