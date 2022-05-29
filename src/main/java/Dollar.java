@@ -6,7 +6,7 @@ public class Dollar {
     }
 
     public Dollar times(int multiplier) {
-        return new Dollar(amount *= multiplier);
+        return new Dollar(amount * multiplier);
     }
 
     @Override
