@@ -8,7 +8,7 @@ Money 반올림?<br>
 hashCode()<br>
 Equal null<br>
 Equal object<br>
-Dollar/Franc 중복<br>
+~~Dollar/Franc 중복~~<br>
 ~~5CHF x 2 = 10CHF~~<br>
 ~~공용 equals~~<br>
 공용 times<br>

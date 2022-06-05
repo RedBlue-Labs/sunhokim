@@ -12,19 +12,15 @@ class DollarTest {
 
     @Test
     public void testDollarMultiplication() {
-        Dollar five = new Dollar(5);
-        assertEquals(new Dollar(10), five.times(2));
-        assertEquals(new Dollar(15), five.times(3));
+        Money five = Dollar.dollar(5);
+        assertEquals(Dollar.dollar(10), five.times(2));
+        assertEquals(Dollar.dollar(15), five.times(3));
     }
 
     @Test
     public void testFrancMultiplication() {
-        Franc five = new Franc(5);
-        assertEquals(new Franc(10), five.times(2));
-        assertEquals(new Franc(15), five.times(3));
-    }
-
-    @Test void testMultiplication() {
-
+        Money five = Dollar.franc(5);
+        assertEquals(Dollar.franc(10), five.times(2));
+        assertEquals(Dollar.franc(15), five.times(3));
     }
 }
