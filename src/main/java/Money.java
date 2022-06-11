@@ -27,4 +27,12 @@ public class Money {
     public String toString() {
         return amount + " " + currency;
     }
+
+    static Money franc(int amount) {
+        return new Money(amount, "CHF");
+    }
+
+    static Money dollar(int amount) {
+        return new Money(amount, "USD");
+    }
 }

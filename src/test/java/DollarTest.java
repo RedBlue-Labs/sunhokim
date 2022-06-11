@@ -7,4 +7,11 @@ class DollarTest {
     public void testDifferentClassEquality() {
         assertTrue(new Money(10, "CHF").equals(new Franc(10, "CHF")));
     }
+
+    @Test
+    public void testEquality() {
+        assertTrue(Money.dollar(5).equals(Money.dollar(5)));
+        assertFalse(Money.dollar(5).equals(Money.dollar(6)));
+        assertFalse(Money.franc(5).equals(Money.dollar(5)));
+    }
 }
