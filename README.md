@@ -12,4 +12,5 @@ Equal object<br>
 ~~5CHF x 2 = 10CHF~~<br>
 ~~공용 equals~~<br>
 공용 times<br>
+~~통화?~~
 ~~Franc와 Dollar 비교하기~~<br>

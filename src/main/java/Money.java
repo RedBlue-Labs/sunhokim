@@ -1,5 +1,15 @@
 public abstract class Money {
     protected int amount;
+    protected String currency;
+
+    public Money(int amount, String currency) {
+        this.amount = amount;
+        this.currency = currency;
+    }
+
+    public String currency(){
+        return this.currency;
+    }
 
     public abstract Money times(int multiplier);
 
@@ -12,11 +22,10 @@ public abstract class Money {
     }
 
     static public Money dollar(int amount) {
-        return new Dollar(amount);
+        return new Dollar(amount, "USD");
     }
 
     static public Money franc(int amount) {
-        return new Dollar(amount);
+        return new Franc(amount, "CHF");
     }
-
 }
