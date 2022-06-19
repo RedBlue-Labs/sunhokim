@@ -38,4 +38,10 @@ class DollarTest {
         Money result = bank.reduce(sum, "USD");
         assertEquals(Money.dollar(7), result);
     }
+
+    @Test
+    public void testIdentityRate() {
+        assertEquals(1, new Bank().getRate("USD", "USD"));
+        assertEquals(2, new Bank().getRate("USD", "CHF"));
+    }
 }
