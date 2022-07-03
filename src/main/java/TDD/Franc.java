@@ -1,3 +1,5 @@
+package TDD;
+
 public class Franc extends Money{
 
     public Franc(int amount, String currency) {
@@ -5,7 +7,7 @@ public class Franc extends Money{
     }
 
     @Override
-    public Money times(int multiplier) {
-        return new Money(amount * multiplier, currency);
+    public Money times(double multiplier) {
+        return new Money((int) (amount * multiplier), currency);
     }
 }

@@ -1,3 +1,5 @@
+package TDD;
+
 public class Sum implements Expression{
     private Expression augend;
     private Expression addend;
@@ -19,7 +21,7 @@ public class Sum implements Expression{
     }
 
     @Override
-    public Expression times(int multiplier) {
+    public Expression times(double multiplier) {
         return new Sum(augend.times(multiplier), addend.times(multiplier));
     }
 }

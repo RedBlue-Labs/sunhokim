@@ -1,3 +1,5 @@
+package TDD;
+
 public class Money implements Expression{
     protected int amount;
     protected String currency;
@@ -12,9 +14,10 @@ public class Money implements Expression{
     }
 
     @Override
-    public Expression times(int multiplier) {
-        return new Money(amount * multiplier, currency);
+    public Expression times(double multiplier) {
+        return new Money((int) (amount * multiplier), currency);
     }
+
 
     @Override
     public boolean equals(Object object) {
@@ -36,6 +39,8 @@ public class Money implements Expression{
     static Money dollar(int amount) {
         return new Money(amount, "USD");
     }
+
+    static Money note(int amount) { return new Money(amount, "GBP"); }
 
     @Override
     public Expression plus(Expression addend) {

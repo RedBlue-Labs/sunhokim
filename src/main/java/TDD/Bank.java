@@ -1,7 +1,10 @@
+package TDD;
+
 import java.util.Hashtable;
 
 public class Bank {
     private Hashtable rates = new Hashtable();
+    private double commission = 0.0f;
 
     private class Pair {
         private String from;
@@ -30,6 +33,16 @@ public class Bank {
 
     public void addRate(String from, String to, int rate) {
         rates.put(new Pair(from, to), new Integer((rate)));
+    }
+
+    public void commission(double commission) {
+        this.commission = commission;
+    }
+
+    public Money convert(Expression money, String target) {
+        Money reducedMoney = reduce(money, target);
+
+        return (Money) reducedMoney.times((1-commission));
     }
 
     public int getRate(String from, String to) {
