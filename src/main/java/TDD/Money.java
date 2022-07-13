@@ -42,6 +42,10 @@ public class Money implements Expression{
 
     static Money note(int amount) { return new Money(amount, "GBP"); }
 
+    static Money zero() {
+        return new Money(0, "USD");
+    }
+
     @Override
     public Expression plus(Expression addend) {
         return new Sum(this, addend);
